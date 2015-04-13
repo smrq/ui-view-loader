@@ -1,6 +1,6 @@
 {
   "name": "smrqUiViewLoader",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Loading view for angular-ui-router ui-view",
   "main": "index.js",
   "scripts": {
