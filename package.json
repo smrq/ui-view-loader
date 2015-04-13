@@ -1,0 +1,32 @@
+{
+  "name": "smrqUiViewLoader",
+  "version": "0.0.0",
+  "description": "Loading view for angular-ui-router ui-view",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "browserify src/index.ts typings/tsd.d.ts -p [tsify --noimplicitany] -s smrqUiViewLoader > index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smrq/ui-view-loader"
+  },
+  "keywords": [
+    "angular",
+    "angular-ui",
+    "angular-ui-router"
+  ],
+  "author": "Greg Smith <smr.kyu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smrq/ui-view-loader/issues"
+  },
+  "homepage": "https://github.com/smrq/ui-view-loader",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "tsify": "^0.8.1"
+  },
+  "peerDependencies": {
+    "angular-ui-router": "*"
+  }
+}
