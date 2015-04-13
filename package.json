@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "browserify src/index.ts typings/tsd.d.ts -p [tsify --noimplicitany] -s smrqUiViewLoader > index.js"
+    "prepublish": "browserify src/index.ts typings/tsd.d.ts -p [tsify --noimplicitany] -s smrqUiViewLoader | derequire > index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/smrq/ui-view-loader",
   "devDependencies": {
     "browserify": "^9.0.8",
+    "derequire": "^2.0.0",
     "tsify": "^0.8.1"
   },
   "peerDependencies": {
