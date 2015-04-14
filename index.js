@@ -1,10 +1,9 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.smrqUiViewLoader = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
-var UiViewLoaderDirective = _dereq_('./ui-view-loader-directive');
-var UiViewLoaderCtrl = _dereq_('./ui-view-loader-ctrl');
-var mod = angular.module('smrq.uiViewLoader', ['ui.router', 'ui.router.util']).directive('smrqUiViewLoader', UiViewLoaderDirective).controller('smrqUiViewLoaderCtrl', UiViewLoaderCtrl);
-module.exports = mod;
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.smrqUiViewLoader = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"./typings/tsd.d.ts":[function(_dereq_,module,exports){
+/// <reference path="angularjs/angular.d.ts" />
+/// <reference path="jquery/jquery.d.ts" />
+/// <reference path="angular-ui-router/angular-ui-router.d.ts" />
 
-},{"./ui-view-loader-ctrl":2,"./ui-view-loader-directive":3}],2:[function(_dereq_,module,exports){
+},{}],1:[function(_dereq_,module,exports){
 var UiViewLoaderCtrl = (function () {
     /*@ngInject*/
     function UiViewLoaderCtrl($scope, $templateFactory, $sce) {
@@ -55,7 +54,7 @@ var UiViewLoaderCtrl = (function () {
 })();
 module.exports = UiViewLoaderCtrl;
 
-},{}],3:[function(_dereq_,module,exports){
+},{}],2:[function(_dereq_,module,exports){
 /*@ngInject*/
 function uiViewLoader() {
     return {
@@ -80,7 +79,11 @@ function uiViewLoader() {
 }
 module.exports = uiViewLoader;
 
-},{}],4:[function(_dereq_,module,exports){
+},{}],"smrq-ui-view-loader":[function(_dereq_,module,exports){
+var UiViewLoaderDirective = _dereq_('./ui-view-loader-directive');
+var UiViewLoaderCtrl = _dereq_('./ui-view-loader-ctrl');
+var mod = angular.module('smrq.uiViewLoader', ['ui.router', 'ui.router.util']).directive('smrqUiViewLoader', UiViewLoaderDirective).controller('smrqUiViewLoaderCtrl', UiViewLoaderCtrl);
+module.exports = mod;
 
-},{}]},{},[1,4])(4)
+},{"./ui-view-loader-ctrl":1,"./ui-view-loader-directive":2}]},{},["smrq-ui-view-loader"])("smrq-ui-view-loader")
 });
